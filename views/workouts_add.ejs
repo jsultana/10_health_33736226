@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+    <h2>Add a New Workout</h2>
+
+    <form action="/workouts/add" method="POST">
+        <div>
+            <label for="workout_date">Date:</label>
+            <input type="date" id="workout_date" name="workout_date" required>
+        </div>
+
+        <div>
+            <label for="workout_type">Type:</label>
+            <input type="text" id="workout_type" name="workout_type" required>
+        </div>
+
+        <div>
+            <label for="duration_minutes">Duration (minutes):</label>
+            <input type="number" id="duration_minutes" name="duration_minutes" required min="1">
+        </div>
+
+        <div>
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+        </div>
+
+        <button type="submit">Save Workout</button>
+    </form>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+    <h2>Your Workouts</h2>
+
+    <!-- Search form -->
+    <form action="/workouts" method="GET" style="margin-bottom: 1.5rem;">
+        <div>
+            <label for="q">Search by workout type or notes:</label>
+            <input type="text" id="q" name="q" placeholder="e.g. running, yoga, park"
+                style="padding: 0.4rem; width: 250px;">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+
+    <% if (workouts && workouts.length> 0) { %>
+        <p>Showing <strong>
+                <%= workouts.length %>
+            </strong> workout(s)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Duration (minutes)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% workouts.forEach(function (workout) { %>
+                    <tr>
+                        <td>
+                            <%= workout.workout_date.toISOString().slice(0, 10) %>
+                        </td>
+                        <td>
+                            <%= workout.workout_type %>
+                        </td>
+                        <td>
+                            <%= workout.duration_minutes %>
+                        </td>
+                        <td>
+                            <%= workout.notes %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <p>No workouts found.</p>
+            <% } %>
+
+                <%- include('partials/footer') %>
