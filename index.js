@@ -125,6 +125,19 @@ app.post('/workouts/add', (req, res, next) => {
     });
 });
 
+// Delete a workout by id
+app.post('/workouts/delete/:id', (req, res, next) => {
+    const id = parseInt(req.params.id, 10);
+    if (Number.isNaN(id)) return res.status(400).send('Invalid id');
+
+
+    const sql = 'DELETE FROM workouts WHERE id = ?';
+    db.query(sql, [id], (err) => {
+        if (err) return next(err);
+        res.redirect('/workouts');
+    });
+});
+
 
 // -------------------------------
 //  START SERVER
