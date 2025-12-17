@@ -31,3 +31,15 @@ HEALTH_HOST=localhost
 HEALTH_USER=root
 HEALTH_PASSWORD=yourpassword
 HEALTH_DATABASE=health
+
+## VM Deployment Note
+
+The application was successfully deployed to the Goldsmiths VM and the
+repository was cloned into the `public_html` directory.
+
+However, MySQL user and database creation on the VM requires elevated
+permissions which are not available to student accounts. As a result,
+the database could not be created on the VM without sysadmin assistance.
+
+The application runs correctly in a local environment, and all SQL
+schema and setup files are included in this repository.
