@@ -1,5 +1,6 @@
 home_page=http://www.doc.gold.ac.uk/~ssult001/
-home=http://doc413.net101:8000/
-about=http://doc413.net101:8000/about
-workouts=http://doc413.net101:8000/workouts
-add_workout=http://doc413.net101:8000/workouts/add
+
+app=http://ubuntu18.campus.goldsmiths.ac.uk:8000/
+workouts=http://ubuntu18.campus.goldsmiths.ac.uk:8000/workouts
+add_workout=http://ubuntu18.campus.goldsmiths.ac.uk:8000/workouts/add
+about=http://ubuntu18.campus.goldsmiths.ac.uk:8000/about
