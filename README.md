@@ -43,3 +43,12 @@ the database could not be created on the VM without sysadmin assistance.
 
 The application runs correctly in a local environment, and all SQL
 schema and setup files are included in this repository.
+
+### doc413 MySQL access
+
+On doc413, MySQL access appears restricted for student accounts:
+
+- `mysql` returns: Access denied for user 'ssult001'@'localhost' (using password: NO)
+- `mysql -u ssult001 -p` returns: Access denied for user 'ssult001'@'localhost' (using password: YES)
+
+I do not have sudo access on doc413 to create/reset database users, so the DB cannot be created on the VM without sysadmin-provided credentials/host.
